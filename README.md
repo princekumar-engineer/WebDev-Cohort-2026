@@ -14,7 +14,9 @@ This repository is a record of my growth in software engineering where I practic
 
 ## 📝 My Blogs
 
-🔗 [Visit My Blog](YOUR_BLOG_LINK)
+🔗 👤 **Username:** [PRINCE KUMAR](https://hashnode.com/@farshoreprince) <br>
+🔗 **Hashnode Profile:** [Visit My Profile](https://princekumar-engineer.hashnode.dev/) <br>
+🔗 **Blog List** [Visit My Profile](https://github.com/princekumar-engineer/WebDev-Cohort-2026/blob/main/Blogs/MyBlog.md)
 
 ---
 
