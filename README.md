@@ -26,8 +26,8 @@ This repository is a record of my growth in software engineering where I practic
 
 ### 📄 HTML Resume Page Assignment
 
-💻 Code → [View Code](https://github.com/username/repo)<br>
-🌐 Live Preview → [Live Demo](https://project.vercel.app)
+💻 Code → [View Code](https://github.com/princekumar-engineer/WebDev-Cohort-2026/blob/main/HTML%20Resume%20Page%20Assignment/index.html)<br>
+🌐 Live Preview → [Live Demo](https://html-resume-page-assignment-black.vercel.app/)
 
 ### 🎨 CSS Product Landing Page Assignment
 

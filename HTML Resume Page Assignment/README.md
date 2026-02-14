@@ -20,7 +20,7 @@ Contact details
 
 ## Demo
 
-🌐 [Live Preview](https://your-site.vercel.app)
+🌐 [Live Preview](https://html-resume-page-assignment-black.vercel.app/)
 
 ## Screenshot
 
@@ -31,7 +31,7 @@ Contact details
 
 ## Code
 
-💻 [View Source Code](https://github.com/princekumar-engineer/WebDev-Cohort-2026)
+💻 [View Source Code](https://github.com/princekumar-engineer/WebDev-Cohort-2026/blob/main/HTML%20Resume%20Page%20Assignment/index.html)
 
 ---
 
