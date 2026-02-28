@@ -30,12 +30,6 @@ A desktop-first documentation-style landing page recreated from the Mintlify web
 
 ---
 
-## Code
-
-💻 [View Source Code](https://github.com/princekumar-engineer/WebDev-Cohort-2026/tree/main/Mintlify-Documentation-Assignment)
-
----
-
 ## How to Run
 
 Clone the repository and open `index.html` in a desktop browser.

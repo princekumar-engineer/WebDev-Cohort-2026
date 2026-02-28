@@ -35,13 +35,13 @@ This repository is a record of my growth in software engineering where I practic
 
 #### Cursor
 
-💻 Code → [View Code](https://github.com/username/repo)<br>
-🌐 Live Preview → [Live Demo](https://project.vercel.app)
+💻 Code → [View Code](https://github.com/princekumar-engineer/WebDev-Cohort-2026/blob/main/webclones/Dev%20Tool%20Landing%20Page%20-%20Cursor/index.html)<br>
+🌐 Live Preview → [Live Demo](https://dev-tool-landing-page-cursor-pink.vercel.app/)
 
 #### Mintlify
 
-💻 Code → [View Code](https://github.com/username/repo)<br>
-🌐 Live Preview → [Live Demo](https://project.vercel.app)
+💻 Code → [View Code](https://github.com/princekumar-engineer/WebDev-Cohort-2026/blob/main/webclones/Documentation%20Website%20-%20Mintlify/index.html)<br>
+🌐 Live Preview → [Live Demo](https://documentation-website-mintlify-pi.vercel.app/)
 
 ---
 
