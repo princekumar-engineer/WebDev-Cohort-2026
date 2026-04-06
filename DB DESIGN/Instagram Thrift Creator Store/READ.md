@@ -1,3 +1,4 @@
+```
 # Instagram Thrift Creator Store — ER Diagram
 
 ## Overview
@@ -222,3 +223,4 @@ This design satisfies:
 This ER diagram provides a scalable and normalized database structure for an Instagram-based thrift and handmade product store. The design properly handles inventory differences, order management, payment tracking, and shipping workflows while maintaining clarity and extensibility.
 
 The schema is suitable for small creators and can scale as the business grows.
+```
