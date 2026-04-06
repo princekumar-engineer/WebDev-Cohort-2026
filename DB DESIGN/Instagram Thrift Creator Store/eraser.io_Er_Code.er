@@ -1,0 +1,85 @@
+customers [icon: user, color: blue] {
+  id int pk
+  name string
+  phone string
+  instagram_handle string
+  address string
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+products [icon: box, color: purple] {
+  id int pk
+  name string
+  category_id int fk
+  size string
+  color string
+  inventory_type enum "UNIQUE","MULTI"
+  product_type enum "THRIFT","HANDMADE"
+  price decimal
+  quantity_available int
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+categories [icon: tag, color: pink] {
+  id int pk
+  name string
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+orders [icon: shopping-cart, color: orange] {
+  id int pk
+  customer_id int fk
+  order_date datetime
+  total_amount decimal
+  order_status enum "PENDING","CONFIRMED","PACKED","SHIPPED","DELIVERED","CANCELLED"
+  payment_status enum "PENDING","PAID","FAILED","REFUNDED","COD_PENDING"
+  shipping_status enum "PENDING","SHIPPED","IN_TRANSIT","OUT_FOR_DELIVERY","DELIVERED","RETURNED"
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+orderitems [icon: list, color: teal] {
+  id int pk
+  order_id int fk
+  product_id int fk
+  quantity int
+  price_at_time decimal
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+payments [icon: credit-card, color: green] {
+  id int pk
+  order_id int fk
+  amount decimal
+  payment_method enum "UPI","CARD","NET_BANKING","COD","BANK_TRANSFER","WALLET"
+  payment_status enum "PENDING","PAID","FAILED","REFUNDED","PARTIALLY_REFUNDED","COD_PENDING"
+  payment_date datetime
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+shipments [icon: truck, color: red] {
+  id int pk
+  order_id int fk
+  address string
+  courier_name string
+  tracking_number string
+  shipping_status enum "PENDING","SHIPPED","IN_TRANSIT","OUT_FOR_DELIVERY","DELIVERED","RETURNED"
+  shipped_date datetime
+  delivered_date datetime
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+customers.id < orders.customer_id
+
+orders.id < orderitems.order_id
+products.id < orderitems.product_id
+categories.id < products.category_id
+
+orders.id < payments.order_id
+orders.id - shipments.order_id
