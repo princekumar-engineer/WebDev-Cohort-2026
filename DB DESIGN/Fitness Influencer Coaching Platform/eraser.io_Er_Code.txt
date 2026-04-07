@@ -1,0 +1,134 @@
+title Fitness Influencer Coaching Platform
+trainers [icon: user, color: orange] {
+  trainer_id int pk
+  name string
+  email string
+  specialization string
+  experience int
+
+  createdAt timestamp 
+  updatedAt timestamp
+}
+
+trainer_clients [icon: users, color: cyan] {
+  trainer_client_id int pk
+  trainer_id int fk
+  client_id int fk
+  assigned_at timestamp
+
+  createdAt timestamp 
+  updatedAt timestamp
+}
+
+clients [icon: user, color: blue] {
+  client_id int pk
+  name string
+  email string
+  phone string
+  age int
+  gender string
+  goal string
+
+  createdAt timestamp 
+  updatedAt timestamp
+}
+
+
+
+plans [icon: clipboard, color: green] {
+  plan_id int pk
+  plan_name string
+  description string
+  duration_days int
+  price decimal
+  trainer_id int fk
+  
+  createdAt timestamp 
+  updatedAt timestamp
+}
+
+subscriptions [icon: link, color: purple] {
+  subscription_id int pk
+  client_id int fk
+  plan_id int fk
+  start_date date
+  end_date date
+  subscription_status enum "PENDING","ACTIVE","PAUSED","COMPLETED","CANCELLED","EXPIRED"
+
+  createdAt timestamp 
+  updatedAt timestamp
+}
+
+sessions[icon: video, color: red] {
+  session_id int pk
+  subscription_id int fk
+  client_id int fk
+  trainer_id int fk
+  session_date datetime
+  session_type enum "CONSULTATION","LIVE_WORKOUT","DIET_REVIEW"
+  notes string
+  session_status enum "SCHEDULED","COMPLETED","CANCELLED","RESCHEDULED","NO_SHOW"
+
+  createdAt timestamp 
+  updatedAt timestamp
+}
+
+checkins [icon: activity, color: yellow] {
+  checkin_id int pk
+  subscription_id int fk
+  client_id int fk
+  trainer_id int fk
+  checkin_date date
+  feedback string
+  checkin_status enum "PENDING","SUBMITTED","MISSED","REVIEWED"
+
+  createdAt timestamp 
+  updatedAt timestamp
+}
+
+progress [icon: bar-chart, color: teal] {
+  progress_id int pk
+  checkin_id int fk
+  weight decimal
+  body_fat decimal
+  chest decimal
+  waist decimal
+  notes string
+
+  createdAt timestamp 
+  updatedAt timestamp
+}
+
+payments [icon: credit-card, color: pink] {
+  payment_id int pk
+  subscription_id int fk
+  amount decimal
+  payment_date datetime
+  method string
+  payment_status enum "PENDING","SUCCESS","FAILED","REFUNDED"
+
+  createdAt timestamp 
+  updatedAt timestamp
+}
+
+
+trainers.trainer_id < plans.trainer_id
+
+trainers.trainer_id < trainer_clients.trainer_id
+clients.client_id < trainer_clients.client_id
+
+clients.client_id < subscriptions.client_id
+plans.plan_id < subscriptions.plan_id
+
+clients.client_id < sessions.client_id
+trainers.trainer_id < sessions.trainer_id
+
+clients.client_id < checkins.client_id
+trainers.trainer_id < checkins.trainer_id
+
+checkins.checkin_id < progress.checkin_id
+
+subscriptions.subscription_id < payments.subscription_id
+
+subscriptions.subscription_id < sessions.subscription_id
+subscriptions.subscription_id < checkins.subscription_id
