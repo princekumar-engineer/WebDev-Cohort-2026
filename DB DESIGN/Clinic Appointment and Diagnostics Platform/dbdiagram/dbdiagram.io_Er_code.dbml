@@ -1,0 +1,184 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+// Clinic Appointment & Diagnostics Platform
+
+Table patients {
+  patient_id int [pk]
+  first_name varchar
+  last_name varchar
+  date_of_birth date
+  gender varchar [note: 'MALE,FEMALE,OTHER']
+  phone varchar
+  email varchar
+  address varchar
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table departments {
+  department_id int [pk]
+  name varchar
+  description varchar
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table rooms {
+  room_id int [pk]
+  department_id int
+  room_number varchar
+  room_type varchar [note: 'CONSULTATION,LAB,WAITING,PROCEDURE']
+  status varchar [note: 'AVAILABLE,OCCUPIED,MAINTENANCE']
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table specialties {
+  specialty_id int [pk]
+  department_id int
+  name varchar
+  description varchar
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table doctors {
+  doctor_id int [pk]
+  specialty_id int
+  first_name varchar
+  last_name varchar
+  phone varchar
+  email varchar
+  consultation_fee decimal
+  status varchar [note: 'ACTIVE,ON_LEAVE,INACTIVE']
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table lab_technicians {
+  technician_id int [pk]
+  department_id int
+  first_name varchar
+  last_name varchar
+  phone varchar
+  email varchar
+  status varchar [note: 'ACTIVE,INACTIVE']
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table appointments {
+  appointment_id int [pk]
+  patient_id int
+  doctor_id int
+  room_id int
+  appointment_datetime datetime
+  reason_for_visit varchar
+  status varchar [note: 'SCHEDULED,CONFIRMED,COMPLETED,CANCELLED,NO_SHOW']
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table consultations {
+  consultation_id int [pk]
+  appointment_id int [null]
+  patient_id int
+  doctor_id int
+  room_id int
+  visit_datetime datetime
+  symptoms text
+  diagnosis text
+  notes text
+  follow_up_date date
+  status varchar [note: 'IN_PROGRESS,COMPLETED,CANCELLED']
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table prescriptions {
+  prescription_id int [pk]
+  consultation_id int
+  medication_name varchar
+  dosage varchar
+  frequency varchar
+  duration varchar
+  instructions text
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table test_types {
+  test_type_id int [pk]
+  name varchar
+  description varchar
+  cost decimal
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table tests {
+  test_id int [pk]
+  consultation_id int
+  test_type_id int
+  technician_id int
+  room_id int
+  instructions text
+  priority varchar [note: 'ROUTINE,URGENT,STAT']
+  status varchar [note: 'ORDERED,SAMPLE_COLLECTED,IN_PROGRESS,COMPLETED,CANCELLED']
+  ordered_at datetime
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table reports {
+  report_id int [pk]
+  test_id int
+  result_summary text
+  file_url varchar
+  status varchar [note: 'PENDING,GENERATED,DELIVERED']
+  generated_at datetime
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+Table payments {
+  payment_id int [pk]
+  consultation_id int
+  amount decimal
+  payment_method varchar [note: 'CASH,CARD,UPI,NET_BANKING,INSURANCE']
+  payment_status varchar [note: 'PENDING,PAID,FAILED,REFUNDED']
+  transaction_reference varchar
+  paid_at datetime
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+
+// Relationships
+
+Ref: patients.patient_id < appointments.patient_id
+Ref: doctors.doctor_id < appointments.doctor_id
+Ref: rooms.room_id < appointments.room_id
+
+Ref: appointments.appointment_id < consultations.appointment_id
+Ref: patients.patient_id < consultations.patient_id
+Ref: doctors.doctor_id < consultations.doctor_id
+Ref: rooms.room_id < consultations.room_id
+
+Ref: consultations.consultation_id < prescriptions.consultation_id
+
+Ref: consultations.consultation_id < tests.consultation_id
+Ref: test_types.test_type_id < tests.test_type_id
+Ref: lab_technicians.technician_id < tests.technician_id
+Ref: rooms.room_id < tests.room_id
+
+Ref: tests.test_id < reports.test_id
+
+Ref: consultations.consultation_id < payments.consultation_id
+
+Ref: departments.department_id < specialties.department_id
+Ref: specialties.specialty_id < doctors.specialty_id
+
+Ref: departments.department_id < rooms.department_id
+Ref: departments.department_id < lab_technicians.department_id

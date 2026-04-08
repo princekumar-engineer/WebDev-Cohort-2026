@@ -1,0 +1,178 @@
+title Clinic Appointment and Diagnostics Platform
+
+patients [icon: user, color: blue] {
+  patient_id int pk
+  first_name string
+  last_name string
+  date_of_birth date
+  gender enum "MALE","FEMALE","OTHER"
+  phone string
+  email string
+  address string
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+departments [icon: building, color: gray] {
+  department_id int pk
+  name string
+  description string
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+rooms [icon: home, color: gray] {
+  room_id int pk
+  department_id int fk
+  room_number string
+  room_type enum "CONSULTATION","LAB","WAITING","PROCEDURE"
+  status enum "AVAILABLE","OCCUPIED","MAINTENANCE"
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+specialties [icon: tag, color: purple] {
+  specialty_id int pk
+  department_id int fk
+  name string
+  description string
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+doctors [icon: stethoscope, color: green] {
+  doctor_id int pk
+  specialty_id int fk
+  first_name string
+  last_name string
+  phone string
+  email string
+  consultation_fee decimal
+  status enum "ACTIVE","ON_LEAVE","INACTIVE"
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+lab_technicians [icon: user-check, color: red] {
+  technician_id int pk
+  department_id int fk
+  first_name string
+  last_name string
+  phone string
+  email string
+  status enum "ACTIVE","INACTIVE"
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+appointments [icon: calendar, color: orange] {
+  appointment_id int pk
+  patient_id int fk
+  doctor_id int fk
+  room_id int fk
+  appointment_datetime datetime
+  reason_for_visit string
+  status enum "SCHEDULED","CONFIRMED","COMPLETED","CANCELLED","NO_SHOW"
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+consultations [icon: file-text, color: teal] {
+  consultation_id int pk
+  appointment_id int fk null
+  patient_id int fk
+  doctor_id int fk
+  room_id int fk
+  visit_datetime datetime
+  symptoms string
+  diagnosis string
+  notes string
+  follow_up_date date
+  status enum "IN_PROGRESS","COMPLETED","CANCELLED"
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+prescriptions [icon: clipboard, color: blue] {
+  prescription_id int pk
+  consultation_id int fk
+  medication_name string
+  dosage string
+  frequency string
+  duration string
+  instructions string
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+test_types [icon: activity, color: pink] {
+  test_type_id int pk
+  name string
+  description string
+  cost decimal
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+tests [icon: flask, color: red] {
+  test_id int pk
+  consultation_id int fk
+  test_type_id int fk
+  technician_id int fk
+  room_id int fk
+  instructions string
+  priority enum "ROUTINE","URGENT","STAT"
+  status enum "ORDERED","SAMPLE_COLLECTED","IN_PROGRESS","COMPLETED","CANCELLED"
+  ordered_at datetime
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+reports [icon: file, color: brown] {
+  report_id int pk
+  test_id int fk
+  result_summary string
+  file_url string
+  status enum "PENDING","GENERATED","DELIVERED"
+  generated_at datetime
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+payments [icon: credit-card, color: green] {
+  payment_id int pk
+  consultation_id int fk
+  amount decimal
+  payment_method enum "CASH","CARD","UPI","NET_BANKING","INSURANCE"
+  payment_status enum "PENDING","PAID","FAILED","REFUNDED"
+  transaction_reference string
+  paid_at datetime
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+patients.patient_id < appointments.patient_id
+doctors.doctor_id < appointments.doctor_id
+rooms.room_id < appointments.room_id
+
+appointments.appointment_id < consultations.appointment_id
+patients.patient_id < consultations.patient_id
+doctors.doctor_id < consultations.doctor_id
+rooms.room_id < consultations.room_id
+
+consultations.consultation_id < prescriptions.consultation_id
+
+consultations.consultation_id < tests.consultation_id
+test_types.test_type_id < tests.test_type_id
+lab_technicians.technician_id < tests.technician_id
+rooms.room_id < tests.room_id
+
+tests.test_id < reports.test_id
+
+consultations.consultation_id < payments.consultation_id
+
+departments.department_id < specialties.department_id
+specialties.specialty_id < doctors.specialty_id
+
+departments.department_id < rooms.department_id
+departments.department_id < lab_technicians.department_id
