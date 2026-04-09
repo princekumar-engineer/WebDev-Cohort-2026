@@ -1,0 +1,100 @@
+title Comic-Con Parking System
+vehicle_categories [icon: truck, color: blue] {
+  category_id int pk
+  category_name string
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+vehicles [icon: car, color: blue] {
+  vehicle_id int pk
+  plate_number string
+  category_id int fk
+  color string
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+parking_zones [icon: map, color: orange] {
+  zone_id int pk
+  zone_name string
+  level string
+  description string
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+spot_categories [icon: tag, color: purple] {
+  spot_category_id int pk
+  category_name string
+  description string
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+parking_spots [icon: grid, color: orange] {
+  spot_id int pk
+  zone_id int fk
+  spot_category_id int fk
+  spot_number string
+  is_active boolean
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+spot_availability [icon: activity, color: green] {
+  availability_id int pk
+  spot_id int fk
+  status enum "AVAILABLE","OCCUPIED","RESERVED"
+  start_time datetime
+  end_time datetime
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+parking_sessions [icon: clock, color: red] {
+  session_id int pk
+  vehicle_id int fk
+  spot_id int fk
+  entry_time datetime
+  exit_time datetime
+  status enum "ACTIVE","COMPLETED","CANCELLED"
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+parking_tickets [icon: ticket, color: yellow] {
+  ticket_id int pk
+  session_id int fk
+  ticket_number string
+  issued_at datetime
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+payments [icon: credit-card, color: green] {
+  payment_id int pk
+  session_id int fk
+  amount decimal
+  payment_method enum "CASH","CARD","UPI","NET_BANKING"
+  payment_status enum "PENDING","PAID","FAILED","REFUNDED"
+  paid_at datetime
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+vehicle_categories.category_id < vehicles.category_id
+
+vehicles.vehicle_id < parking_sessions.vehicle_id
+
+parking_spots.spot_id < parking_sessions.spot_id
+
+parking_zones.zone_id < parking_spots.zone_id
+
+spot_categories.spot_category_id < parking_spots.spot_category_id
+
+parking_spots.spot_id < spot_availability.spot_id
+
+parking_sessions.session_id - parking_tickets.session_id
+
+parking_sessions.session_id - payments.session_id
