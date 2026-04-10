@@ -1,0 +1,135 @@
+title Smart Elevator Control
+buildings [icon: building, color: blue] {
+  building_id int pk
+  name varchar
+  address varchar
+  city varchar
+  state varchar
+  country varchar
+  total_floors int
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+floors [icon: layers, color: teal] {
+  floor_id int pk
+  building_id int fk
+  floor_number int
+  floor_name varchar
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+elevator_shafts [icon: box, color: gray] {
+  shaft_id int pk
+  building_id int fk
+  shaft_number int
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+elevators [icon: arrow-up-down, color: purple] {
+  elevator_id int pk
+  building_id int fk
+  shaft_id int fk
+  elevator_code varchar
+  capacity int
+  max_weight int
+  installation_date date
+  is_active boolean
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+elevator_floor_map [icon: link, color: orange] {
+  id int pk
+  elevator_id int fk
+  floor_id int fk
+  createdAt timestamp
+  updatedAt timestamp
+
+}
+
+floor_requests [icon: bell, color: red] {
+  request_id int pk
+  building_id int fk
+  floor_id int fk
+  destination_floor_id int fk
+  direction enum "UP","DOWN"
+  request_time datetime
+  request_status enum "PENDING","ASSIGNED","COMPLETED","CANCELLED"
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+ride_assignments [icon: shuffle, color: pink] {
+  assignment_id int pk
+  request_id int fk
+  elevator_id int fk
+  assigned_time datetime
+  assignment_status enum "ASSIGNED","REASSIGNED","COMPLETED"
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+ride_logs [icon: activity, color: cyan] {
+  ride_id int pk
+  elevator_id int fk
+  request_id int fk
+  source_floor_id int fk
+  destination_floor_id int fk
+  start_time datetime
+  end_time datetime
+  ride_status enum "STARTED","COMPLETED","INTERRUPTED"
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+elevator_status [icon: signal, color: yellow] {
+  status_id int pk
+  elevator_id int fk
+  current_floor_id int fk
+  status enum "IDLE","MOVING","MAINTENANCE","OUT_OF_SERVICE"
+  direction enum "UP","DOWN","NONE"
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+maintenance_logs [icon: tool, color: brown] {
+  maintenance_id int pk
+  elevator_id int fk
+  start_time datetime
+  end_time datetime
+  reason varchar
+  performed_by varchar
+  maintenance_status enum "SCHEDULED","IN_PROGRESS","COMPLETED"
+  createdAt timestamp
+  updatedAt timestamp
+}
+
+buildings.building_id < floors.building_id
+buildings.building_id < elevators.building_id
+buildings.building_id < elevator_shafts.building_id
+
+elevator_shafts.shaft_id < elevators.shaft_id
+
+elevators.elevator_id < elevator_floor_map.elevator_id
+floors.floor_id < elevator_floor_map.floor_id
+
+floors.floor_id < floor_requests.floor_id
+floors.floor_id < floor_requests.destination_floor_id
+buildings.building_id < floor_requests.building_id
+
+floor_requests.request_id < ride_assignments.request_id
+elevators.elevator_id < ride_assignments.elevator_id
+
+elevators.elevator_id < ride_logs.elevator_id
+floor_requests.request_id < ride_logs.request_id
+
+floors.floor_id < ride_logs.source_floor_id
+floors.floor_id < ride_logs.destination_floor_id
+
+elevators.elevator_id < elevator_status.elevator_id
+floors.floor_id < elevator_status.current_floor_id
+
+elevators.elevator_id < maintenance_logs.elevator_id
