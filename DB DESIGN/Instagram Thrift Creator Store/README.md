@@ -1,6 +1,14 @@
-```
+
 # Instagram Thrift Creator Store — ER Diagram
 
+---
+### ER Diagram (PNG)
+
+
+### Eraser.io with dbml
+![Eraser ERD](Instagram_Thrift_Creator_Store.png)
+
+---
 ## Overview
 
 This project presents an Entity Relationship (ER) diagram for a small Instagram-based thrift and handmade product store. The business initially manages orders through Instagram DMs and WhatsApp, but as it grows, it requires a structured database to manage products, customers, orders, payments, and shipments.
@@ -223,4 +231,3 @@ This design satisfies:
 This ER diagram provides a scalable and normalized database structure for an Instagram-based thrift and handmade product store. The design properly handles inventory differences, order management, payment tracking, and shipping workflows while maintaining clarity and extensibility.
 
 The schema is suitable for small creators and can scale as the business grows.
-```

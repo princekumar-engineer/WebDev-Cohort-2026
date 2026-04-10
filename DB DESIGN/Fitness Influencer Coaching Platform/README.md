@@ -1,5 +1,16 @@
 # Fitness Influencer Coaching Platform — ER Diagram
 
+---
+## ER Diagram (PNG)
+
+
+### Eraser.io with dbml
+![Eraser ERD](1.Full_ER_Fitness%20Influencer%20Coaching%20Platform.png)
+
+![Eraser ERD](2.%20Left_ER_Fitness%20Influencer%20Coaching%20Platform.png)
+
+![Eraser ERD](1.Full_ER_Fitness%20Influencer%20Coaching%20Platform.png)
+---
 ## Overview
 
 This project models a database for an **online fitness coaching platform** where trainers manage clients, sell coaching plans, schedule consultations, track progress, and handle subscriptions and payments.
