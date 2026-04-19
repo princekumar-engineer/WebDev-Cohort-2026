@@ -102,4 +102,142 @@
 
 <br>
 
- 
+## [Synchronous vs Asynchronous in JavaScript](https://princekumar-engineer.hashnode.dev/synchronous-vs-asynchronous-in-javascript)
+
+<a href="https://princekumar-engineer.hashnode.dev/synchronous-vs-asynchronous-in-javascript" align="center">
+    <p align="center">
+      <img width = "500px" alt="Synchronous vs Asynchronous in JavaScript" src="../Assets/04-JavaScript/Synchronous vs Asynchronous JavaScript.png">
+    <p>
+</a>
+
+<br>
+
+## [Callbacks in JavaScript: Why They Exist](https://princekumar-engineer.hashnode.dev/callbacks-in-javascript-why-they-exist)
+
+<a href="https://princekumar-engineer.hashnode.dev/callbacks-in-javascript-why-they-exist" align="center">
+    <p align="center">
+      <img width = "500px" alt="Callbacks in JavaScript: Why They Exist" src="../Assets/04-JavaScript/Callbacks in JavaScript Why They Exist.png">
+    <p>
+</a>
+
+<br>
+
+## [JavaScript Promises Explained for Beginners](https://princekumar-engineer.hashnode.dev/javascript-promises-explained-for-beginners)
+
+<a href="https://princekumar-engineer.hashnode.dev/javascript-promises-explained-for-beginners" align="center">
+    <p align="center">
+      <img width = "500px" alt="JavaScript Promises Explained for Beginners" src="../Assets/04-JavaScript/JavaScript Promises Explained for Beginners.png">
+    <p>
+</a>
+
+<br>
+
+## [Async Await in JavaScript](https://princekumar-engineer.hashnode.dev/async-await-in-javascript-writing-cleaner-asynchronous-code)
+
+<a href="https://princekumar-engineer.hashnode.dev/async-await-in-javascript-writing-cleaner-asynchronous-code" align="center">
+    <p align="center">
+      <img width = "500px" alt="Async Await in JavaScript" src="../Assets/04-JavaScript/Async Await in JavaScript.png">
+    <p>
+</a>
+
+<br>
+
+## [Error Handling in JavaScript: Try Catch Finally](https://princekumar-engineer.hashnode.dev/error-handling-in-javascript-try-catch-finally)
+
+<a href="https://princekumar-engineer.hashnode.dev/error-handling-in-javascript-try-catch-finally" align="center">
+    <p align="center">
+      <img width = "500px" alt="Error Handling in JavaScript: Try Catch Finally" src="../Assets/04-JavaScript/Error Handling in JavaScript.png">
+    <p>
+</a>
+
+<br>
+
+## [Understanding the this Keyword in JavaScript](https://princekumar-engineer.hashnode.dev/understanding-the-this-keyword-in-javascript)
+
+<a href="https://princekumar-engineer.hashnode.dev/understanding-the-this-keyword-in-javascript" align="center">
+    <p align="center">
+      <img width = "500px" alt="Understanding the this Keyword in JavaScript" src="../Assets/04-JavaScript/Understanding the this Keyword in JavaScript.png">
+    <p>
+</a>
+
+<br>
+
+## [The new Keyword in JavaScript](https://princekumar-engineer.hashnode.dev/the-new-keyword-in-javascript)
+
+<a href="https://princekumar-engineer.hashnode.dev/the-new-keyword-in-javascript" align="center">
+    <p align="center">
+      <img width = "500px" alt="The new Keyword in JavaScript" src="../Assets/04-JavaScript/The new Keyword in JavaScript.png">
+    <p>
+</a>
+
+<br>
+
+## [Template Literals in JavaScript](https://princekumar-engineer.hashnode.dev/template-literals-in-javascript)
+
+<a href="https://princekumar-engineer.hashnode.dev/template-literals-in-javascript" align="center">
+    <p align="center">
+      <img width = "500px" alt="Template Literals in JavaScript" src="../Assets/04-JavaScript/Template Literals in JavaScript.png">
+    <p>
+</a>
+
+<br>
+
+## [Destructuring in JavaScript](https://princekumar-engineer.hashnode.dev/destructuring-in-javascript)
+
+<a href="https://princekumar-engineer.hashnode.dev/destructuring-in-javascript" align="center">
+    <p align="center">
+      <img width = "500px" alt="Destructuring in JavaScript" src="../Assets/04-JavaScript/Destructuring in JavaScript.png">
+    <p>
+</a>
+
+<br>
+
+## [Spread vs Rest Operators in JavaScript](https://princekumar-engineer.hashnode.dev/spread-vs-rest-operators-in-javascript)
+
+<a href="https://princekumar-engineer.hashnode.dev/spread-vs-rest-operators-in-javascript" align="center">
+    <p align="center">
+      <img width = "500px" alt="Spread vs Rest Operators in JavaScript" src="../Assets/04-JavaScript/Spread vs Rest Operators in JavaScript.png">
+    <p>
+</a>
+
+<br>
+
+## [Map and Set in JavaScript](https://princekumar-engineer.hashnode.dev/map-and-set-in-javascript)
+
+<a href="https://princekumar-engineer.hashnode.dev/map-and-set-in-javascript" align="center">
+    <p align="center">
+      <img width = "500px" alt="Map and Set in JavaScript" src="../Assets/04-JavaScript/Map and Set in JavaScript.png">
+    <p>
+</a>
+
+<br>
+
+## [Array Flatten in JavaScript](https://princekumar-engineer.hashnode.dev/array-flatten-in-javascript)
+
+<a href="https://princekumar-engineer.hashnode.dev/array-flatten-in-javascript" align="center">
+    <p align="center">
+      <img width = "500px" alt="Array Flatten in JavaScript" src="../Assets/04-JavaScript/Array Flatten in JavaScript.png">
+    <p>
+</a>
+
+<br>
+
+## [String Polyfills and Common Interview Methods in JavaScript](https://princekumar-engineer.hashnode.dev/string-polyfills-and-common-interview-methods-in-javascript)
+
+<a href="https://princekumar-engineer.hashnode.dev/string-polyfills-and-common-interview-methods-in-javascript" align="center">
+    <p align="center">
+      <img width = "500px" alt="String Polyfills and Common Interview Methods in JavaScript" src="../Assets/04-JavaScript/String Polyfills and Common Interview Methods in JavaScript.png">
+    <p>
+</a>
+
+<br>
+
+## [JavaScript Modules: Import and Export Explained](https://princekumar-engineer.hashnode.dev/javascript-modules-import-and-export-explained)
+
+<a href="https://princekumar-engineer.hashnode.dev/javascript-modules-import-and-export-explained" align="center">
+    <p align="center">
+      <img width = "500px" alt="JavaScript Modules: Import and Export Explained" src="../Assets/04-JavaScript/JavaScript Modules.png">
+    <p>
+</a>
+
+<br>
