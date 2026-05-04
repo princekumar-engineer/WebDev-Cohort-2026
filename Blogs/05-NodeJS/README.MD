@@ -84,7 +84,7 @@
 
 <a href="https://princekumar-engineer.hashnode.dev/creating-routes-and-handling-requests-with-express" align="center">
     <p align="center">
-      <img width = "500px" alt="Creating Routes and Handling Requests with Express" src="../Assets/05-NodeJS/[Creating Routes and Handling Requests with Express.png">
+      <img width = "500px" alt="Creating Routes and Handling Requests with Express" src="../Assets/05-NodeJS/Creating Routes and Handling Requests with Express.png">
     <p>
 </a>
 
@@ -144,7 +144,7 @@
 
 <a href="https://princekumar-engineer.hashnode.dev/jwt-authentication-in-node-js-explained-simply" align="center">
     <p align="center">
-      <img width = "500px" alt="JWT Authentication in Node.js Explained Simply" src="../Assets/05-NodeJS/[JWT Authentication in Node.js Explained Simply.png">
+      <img width = "500px" alt="JWT Authentication in Node.js Explained Simply" src="../Assets/05-NodeJS/JWT Authentication in Node.js Explained Simply.png">
     <p>
 </a>
 
