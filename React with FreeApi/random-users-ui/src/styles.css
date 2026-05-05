@@ -1,0 +1,106 @@
+/* Reset + base */
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+  color: #333;
+}
+
+/* Container grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient border effect */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile image */
+.card img {
+  border-radius: 50%;
+  margin-bottom: 12px;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Name */
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Email */
+.card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Location highlight */
+.card p:last-child {
+  font-weight: 500;
+  color: #2575fc;
+}
+
+/* Status text (loading/error) */
+.status {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Smooth fade-in animation */
+.card {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

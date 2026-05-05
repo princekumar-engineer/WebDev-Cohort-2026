@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.question {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.answer {
+  margin-top: 10px;
+  color: #555;
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #4cafef;
+  color: white;
+}
+
+.buttons button:hover {
+  background: #3498db;
+}

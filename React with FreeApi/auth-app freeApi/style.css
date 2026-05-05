@@ -1,0 +1,40 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
+  width: 90%;
+}
+
+button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  background: #4cafef;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3498db;
+}
+
+#message {
+  margin-top: 20px;
+  font-weight: bold;
+}

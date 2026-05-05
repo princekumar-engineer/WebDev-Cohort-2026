@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cat-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff4c4c;
+}
