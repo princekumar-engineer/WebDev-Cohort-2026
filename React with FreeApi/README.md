@@ -25,14 +25,14 @@ Each project focuses on API integration, UI design, and core frontend concepts u
 
 | Project            | Repository    |
 | ------------------ | ------------- |
-| Random Users UI    | [GitHub Link] |
-| Meals Listing UI   | [GitHub Link] |
-| Random Cat Viewer  | [GitHub Link] |
-| Random Jokes App   | [GitHub Link] |
-| Quotes Generator   | [GitHub Link] |
-| Product Listing UI | [GitHub Link] |
-| YouTube Videos UI  | [GitHub Link] |
-| Authentication App | [GitHub Link] |
+| Random Users UI    | [GitHub Link](https://github.com/princekumar-engineer/WebDev-Cohort-2026/tree/main/React%20with%20FreeApi/random-users-ui) |
+| Meals Listing UI   | [GitHub Link](https://github.com/princekumar-engineer/WebDev-Cohort-2026/tree/main/React%20with%20FreeApi/meals-ui) |
+| Random Cat Viewer  | [GitHub Link](https://github.com/princekumar-engineer/WebDev-Cohort-2026/tree/main/React%20with%20FreeApi/cat-viewer) |
+| Random Jokes App   | [GitHub Link](https://github.com/princekumar-engineer/WebDev-Cohort-2026/tree/main/React%20with%20FreeApi/jokes-ui) |
+| Quotes Generator   | [GitHub Link](https://github.com/princekumar-engineer/WebDev-Cohort-2026/tree/main/React%20with%20FreeApi/quotes-ui) |
+| Product Listing UI | [GitHub Link](https://github.com/princekumar-engineer/WebDev-Cohort-2026/tree/main/React%20with%20FreeApi/product-ui) |
+| YouTube Videos UI  | [GitHub Link](https://github.com/princekumar-engineer/WebDev-Cohort-2026/tree/main/React%20with%20FreeApi/youtube-ui) |
+| Authentication App | [GitHub Link](https://github.com/princekumar-engineer/WebDev-Cohort-2026/tree/main/React%20with%20FreeApi/auth-app%20freeApi) |
 
 ---
 
