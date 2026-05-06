@@ -6,7 +6,7 @@
 
 ## 🌐 Live Demo
 
-🔗 https://your-live-link.vercel.app
+🔗 [Live Preview](https://freeapi-build-an-authentication-app.netlify.app/)
 
 ---
 

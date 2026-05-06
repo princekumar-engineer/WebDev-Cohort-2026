@@ -6,11 +6,7 @@
 
 ## 🌐 Live Demo
 
-🔗 https://your-live-link.vercel.app
-
-## 📂 GitHub Repository
-
-🔗 https://github.com/your-username/random-users-ui
+🔗 [Live Preview](https://free-api-random-users-ui-rho.vercel.app/)
 
 ---
 

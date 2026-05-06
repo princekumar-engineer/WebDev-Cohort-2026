@@ -6,7 +6,7 @@
 
 ## 🌐 Demo
 
-🔗 [Live Preview](---)
+🔗 [Live Preview](https://freeapi-meals-listing-interface.netlify.app/)
 
 ---
 

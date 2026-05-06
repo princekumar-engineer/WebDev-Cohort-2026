@@ -6,7 +6,7 @@
 
 ## 🌐 Live Demo
 
-🔗 https://your-live-link.vercel.app
+🔗 [Live Preview](https://freeapi-quotes-listing-application.netlify.app/)
 
 ---
 

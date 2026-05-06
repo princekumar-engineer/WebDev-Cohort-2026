@@ -6,7 +6,7 @@
 
 ## 🌐 Live Demo
 
-🔗 https://your-live-link.vercel.app
+🔗 [Live Preview](https://freeapi-product-listing-interface.netlify.app/)
 
 
 ---
