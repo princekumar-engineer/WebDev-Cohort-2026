@@ -1,0 +1,34 @@
+# Dependencies
+node_modules
+
+# Environment Variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime Files
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage
+
+# Build Files
+dist
+build
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE Files
+.vscode
+.idea
+
+# Temporary Files
+*.swp

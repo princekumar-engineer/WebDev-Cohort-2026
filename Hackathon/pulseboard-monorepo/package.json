@@ -1,0 +1,25 @@
+{
+  "name": "pulseboard-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PulseBoard Full Stack Polling Platform",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f"
+},
+  "keywords": [
+    "mern",
+    "polling-app",
+    "socketio",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
