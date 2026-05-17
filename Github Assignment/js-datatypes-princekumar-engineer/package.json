@@ -1,0 +1,17 @@
+{
+  "name": "js-datatypes-lab",
+  "version": "1.0.0",
+  "description": "JavaScript Data Types Lab - Story-based exercises to master strings, numbers, booleans, arrays, objects, and their built-in methods",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watchAll",
+    "test:win": "set NODE_OPTIONS=--experimental-vm-modules&& jest",
+    "test:win:watch": "set NODE_OPTIONS=--experimental-vm-modules&& jest --watchAll"
+  },
+  "keywords": ["javascript", "datatypes", "lab", "education"],
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
