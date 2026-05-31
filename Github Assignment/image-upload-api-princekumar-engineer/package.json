@@ -1,0 +1,35 @@
+{
+  "name": "image-upload-api",
+  "version": "1.0.0",
+  "description": "Image Upload API - GitHub Classroom Lab",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
+    "test:win": "set NODE_OPTIONS=--experimental-vm-modules&& jest --runInBand"
+  },
+  "keywords": [
+    "file-upload",
+    "multer",
+    "sharp",
+    "image-processing",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.8.0",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.33.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "mongodb-memory-server": "^10.1.0",
+    "form-data": "^4.0.0"
+  }
+}

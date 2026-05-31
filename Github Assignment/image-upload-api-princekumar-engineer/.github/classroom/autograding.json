@@ -1,0 +1,46 @@
+{
+  "tests": [
+    {
+      "name": "01 - Health Check",
+      "setup": "npm ci",
+      "run": "NODE_OPTIONS=--experimental-vm-modules npx jest tests/visible/01-health.spec.js --verbose",
+      "timeout": 30,
+      "points": 5
+    },
+    {
+      "name": "02 - Database Connection",
+      "setup": "",
+      "run": "NODE_OPTIONS=--experimental-vm-modules npx jest tests/visible/02-connect.spec.js --verbose",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "03 - Image Upload",
+      "setup": "",
+      "run": "NODE_OPTIONS=--experimental-vm-modules npx jest tests/visible/03-upload.spec.js --verbose",
+      "timeout": 30,
+      "points": 25
+    },
+    {
+      "name": "04 - List Images",
+      "setup": "",
+      "run": "NODE_OPTIONS=--experimental-vm-modules npx jest tests/visible/04-list.spec.js --verbose",
+      "timeout": 30,
+      "points": 20
+    },
+    {
+      "name": "05 - Download Images",
+      "setup": "",
+      "run": "NODE_OPTIONS=--experimental-vm-modules npx jest tests/visible/05-download.spec.js --verbose",
+      "timeout": 30,
+      "points": 20
+    },
+    {
+      "name": "06 - Delete Images",
+      "setup": "",
+      "run": "NODE_OPTIONS=--experimental-vm-modules npx jest tests/visible/06-delete.spec.js --verbose",
+      "timeout": 30,
+      "points": 20
+    }
+  ]
+}

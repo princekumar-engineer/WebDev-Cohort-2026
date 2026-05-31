@@ -21,6 +21,7 @@ React is a JavaScript library for building user interfaces.
 
 ---
 <img src="Screenshots/Intro.png">
+
 ---
 # Basic Setup with Vite
 

@@ -1,0 +1,46 @@
+{
+  "tests": [
+    {
+      "name": "01 - Health Check",
+      "setup": "npm ci",
+      "run": "NODE_OPTIONS=--experimental-vm-modules npx jest tests/visible/01-health.spec.js --verbose",
+      "timeout": 30,
+      "points": 5
+    },
+    {
+      "name": "02 - Database Connection",
+      "setup": "",
+      "run": "NODE_OPTIONS=--experimental-vm-modules npx jest tests/visible/02-connect.spec.js --verbose",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "03 - User Registration",
+      "setup": "",
+      "run": "NODE_OPTIONS=--experimental-vm-modules npx jest tests/visible/03-register.spec.js --verbose",
+      "timeout": 30,
+      "points": 20
+    },
+    {
+      "name": "04 - Login & JWT",
+      "setup": "",
+      "run": "NODE_OPTIONS=--experimental-vm-modules npx jest tests/visible/04-login.spec.js --verbose",
+      "timeout": 30,
+      "points": 20
+    },
+    {
+      "name": "05 - Protected Routes",
+      "setup": "",
+      "run": "NODE_OPTIONS=--experimental-vm-modules npx jest tests/visible/05-protected.spec.js --verbose",
+      "timeout": 30,
+      "points": 25
+    },
+    {
+      "name": "06 - Role-Based Authorization",
+      "setup": "",
+      "run": "NODE_OPTIONS=--experimental-vm-modules npx jest tests/visible/06-roles.spec.js --verbose",
+      "timeout": 30,
+      "points": 20
+    }
+  ]
+}

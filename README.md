@@ -15,9 +15,9 @@
   <!-- <a href="https://www.linkedin.com/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a> -->
-  <a href="https://x.com/FarshorePrince" target="_blank">
+  <!-- <a href="https://x.com/FarshorePrince" target="_blank">
     <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" />
-  </a>
+  </a> -->
 
 </p>
 
@@ -25,7 +25,6 @@
 
 ---
 # Hi, I am PRINCE KUMAR 👋
-
 Welcome to my developer journey repository 🚀
 
 This repository is where I document everything I learn and build while exploring modern software development.
@@ -33,6 +32,14 @@ This repository is where I document everything I learn and build while exploring
 You will find learning notes, projects, experiments, working code, and production grade applications that reflect my progress as a developer.
 
 From understanding how the internet works to building scalable full stack systems and AI powered applications, this repository represents my continuous learning journey and hands on practice.
+
+This learning journey is part of the **Chai Aur Cohort**, a full-stack web development program by **[Hitesh Choudhary](https://www.youtube.com/@chaiaurcode)** & **[Piyush Garg](https://www.youtube.com/@piyushgargdev)**, guided by their teaching and mentorship.
+
+🌐 **Learning Platform:** https://chaicode.com/
+
+📖 **Syllabus / Course Roadmap:** https://chaicode.com/cohorts/web-dev#syllabus
+
+This repository is not just a collection of code, but a reflection of consistency, curiosity, and continuous improvement as I grow as a developer.
 
 
 ---
@@ -168,7 +175,9 @@ Standard technologies, frameworks, databases, DevOps tools, and AI platforms use
  ┃
  ┣ 📂 React-Chapter-wise
  ┃ ┣ 📂 Week 1
- ┃ ┗ 📂 Week 2
+ ┃ ┣ 📂 Week 2
+ ┃ ┣ 📂 Basic React Project
+ ┃ ┗ 📜 README.md
  ┃
  ┣ 📂 javascript-foundation
  ┃ ┣ 📂 js-basics

@@ -1,0 +1,34 @@
+{
+  "name": "auth-api",
+  "version": "1.0.0",
+  "description": "Authentication & Authorization API - GitHub Classroom Lab",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:win": "set NODE_OPTIONS=--experimental-vm-modules&& jest --runInBand"
+  },
+  "keywords": [
+    "authentication",
+    "authorization",
+    "jwt",
+    "bcrypt",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.8.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "mongodb-memory-server": "^10.1.0"
+  }
+}
