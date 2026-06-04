@@ -112,16 +112,11 @@ Standard technologies, frameworks, databases, DevOps tools, and AI platforms use
 
 ```bash id="repo-structure"
 📦 developer-journey
- ┣ 📂 Backend Engineering
- ┃ ┣ 📂 Authentications
- ┃ ┣ 📂 Typescript
- ┃ ┣ 📂 SQL
- ┃ ┣ 📂 MongoDB
- ┃ ┣ 📂 PostgreSQL
- ┃ ┣ 📂 Redis
- ┃ ┣ 📂 One-Million CheckBox
- ┃ ┣ 📂 Kafka-Live-Location-Tracker
- ┃ ┗ 📂 OIDC
+ ┃
+ ┣ 📂 Webclones
+ ┃ ┣ 📂 HTML Resume Page Assignment
+ ┃ ┣ 📂 Dev Tool Landing Page - Cursor
+ ┃ ┗ 📂 Documentation Website - Mintlify 
  ┃
  ┣ 📂 Blogs
  ┃ ┣ 📂 01-Git
@@ -132,60 +127,59 @@ Standard technologies, frameworks, databases, DevOps tools, and AI platforms use
  ┃ ┣ 📂 Assets
  ┃ ┗ 📜 README.md
  ┃
- ┣ 📂 DB DESIGN
+ ┣ 📂 Labs
+ ┃ ┣ 📂 Screenshots
+ ┃ ┗ 📜 README.md 
+ ┃ 
+ ┣ 📂 Javascript
+ ┃ ┣ 📂 js-basics
+ ┃ ┗ 📂 T-You-Dont-Know-Js
+ ┃
+ ┣ 📂 Github Assignment
+ ┃ ┣ 📂 JS-1 Conditionals
+ ┃ ┣ 📂 JS-2 Datatypes Foundation
+ ┃ ┣ 📂 JS-3 Datatypes Intermediate
+ ┃ ┣ 📂 JS-4 Loops
+ ┃ ┣ 📂 JS-5 Functions
+ ┃ ┣ 📂 JS-6 Async Oops
+ ┃ ┣ 📂 JS-7 DOM
+ ┃ ┣ 📂 JS-8 Auth API
+ ┃ ┣ 📂 JS-9 First CRUD App
+ ┃ ┗ 📂 JS-10 Image Upload API 
+ ┃ 
+ ┣ 📂 Database Designs
  ┃ ┣ 📂 Clinic Appointment and Diagnostics Platform
  ┃ ┣ 📂 Comic-Con Parking System
  ┃ ┣ 📂 Fitness Influencer Coaching Platform
  ┃ ┣ 📂 Instagram Thrift Creator Store
  ┃ ┗ 📂 Smart Elevator Control
  ┃
- ┣ 📂 Github Assignment
- ┃ ┣ 📂 Conditionals
- ┃ ┣ 📂 Datatypes Foundation
- ┃ ┣ 📂 Datatypes Intermediate
- ┃ ┣ 📂 Loops
- ┃ ┣ 📂 Functions
- ┃ ┣ 📂 JS Async Oops
- ┃ ┣ 📂 JS DOM
- ┃ ┣ 📂 Auth API
- ┃ ┣ 📂 First CRUD App
- ┃ ┗ 📂 Image Upload API 
- ┃ 
- ┣ 📂 HTML Resume Page Assignment
- ┃
- ┣ 📂 Hackathon
+ ┣ 📂 Hackathons
  ┃ ┣ 📂 book-my-ticket
  ┃ ┣ 📂 Form Builder with tRPC
  ┃ ┗ 📂 pulseboard-monorepo
  ┃
- ┣ 📂 Labs
- ┃ ┣ 📂 Screenshots
- ┃ ┗ 📜 README.md
- ┃
- ┣ 📂 React with FreeApi
- ┃ ┣ 📂 auth-app freeApi
- ┃ ┣ 📂 cat-viewer
- ┃ ┣ 📂 jokes-ui
- ┃ ┣ 📂 meals-ui
- ┃ ┣ 📂 product-ui
- ┃ ┣ 📂 quotes-ui
- ┃ ┣ 📂 random-users-ui
- ┃ ┣ 📂 youtube-ui
- ┃ ┗ 📜 README.md
- ┃
- ┣ 📂 React-Chapter-wise
- ┃ ┣ 📂 Week 1
+ ┣ 📂 React
  ┃ ┣ 📂 Week 2
+ ┃ ┣ 📂 React with FreeApi
  ┃ ┣ 📂 Basic React Project
  ┃ ┗ 📜 README.md
  ┃
- ┣ 📂 javascript-foundation
- ┃ ┣ 📂 js-basics
- ┃ ┗ 📂 T-You-Dont-Know-Js
+ ┣ 📂 Backend Engineering
+ ┃ ┣ 📂 Authentications
+ ┃ ┣ 📂 Typescript
+ ┃ ┣ 📂 SQL
+ ┃ ┣ 📂 MongoDB
+ ┃ ┣ 📂 PostgreSQL
+ ┃ ┣ 📂 Redis
+ ┃ ┣ 📂 One Million CheckBox
+ ┃ ┣ 📂 Kafka Live Location Tracker
+ ┃ ┗ 📂 OIDC
  ┃
- ┣ 📂 webclones
- ┃ ┣ 📂 Dev Tool Landing Page - Cursor
- ┃ ┗ 📂 Documentation Website - Mintlify
+ ┣ AI Integration
+ ┃ ┣ 📂 Day 1 chAI
+ ┃ ┣ 📂 Day 2 chAI Inngest 
+ ┃ ┗ 📜 README.md 
  ┃
  ┣ 📜 CONTRIBUTING.md
  ┃
@@ -382,6 +376,6 @@ If you find this repository useful:
 ---
 
 <p align="center">
-  <b>Made with ❤️ by Satya</b><br>
+  <b>Made with ❤️ by PRINCE</b><br>
   <i>Happy Coding! 🚀</i>
 </p>
