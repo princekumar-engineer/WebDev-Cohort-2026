@@ -160,6 +160,7 @@ Standard technologies, frameworks, databases, DevOps tools, and AI platforms use
  ┃ ┗ 📂 pulseboard-monorepo
  ┃
  ┣ 📂 React
+ ┃ ┣ 📂 Week 1
  ┃ ┣ 📂 Week 2
  ┃ ┣ 📂 React with FreeApi
  ┃ ┣ 📂 Basic React Project
