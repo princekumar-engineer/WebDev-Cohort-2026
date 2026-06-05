@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      target: development # Targets the development layer of your multi-stage Dockerfile
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+      DB_URL: postgresql://${DB_USER:-user}:${DB_PASS:-pass}@postgres:5432/${DB_NAME:-mydb}
+      REDIS_URL: redis://redis:6379
+      PORT: 3000
+      JWT_SECRET: ${JWT_SECRET} # Safely pulled from your local .env file
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules # Anonymous volume to isolate container packages from host system
+    depends_on:
+      postgres:
+        condition: service_healthy # App waits for Postgres to fully accept connections
+      redis:
+        condition: service_healthy # App waits for Redis to respond to internal pings
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ${DB_NAME:-mydb}
+      POSTGRES_USER: ${DB_USER:-user}
+      POSTGRES_PASSWORD: ${DB_PASS:-pass}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Mount point to ensure local DB data is never lost
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-user}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - app-network
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data # Mount point to maintain cache states across container restarts
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - app-network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  app-network:
+    driver: bridge
