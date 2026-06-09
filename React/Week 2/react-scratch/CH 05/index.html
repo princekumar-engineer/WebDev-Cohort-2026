@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn React</title>
+    <style>
+      /* //dark mode */
+      body {
+        background-color: #333;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+    </style>
+    <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+
+    <!-- Load babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <h1>Learn React</h1>
+    <div id="root">this is classic root</div>
+
+    <script type="text/babel">
+      const Chai = () => {
+        return <h2>Chai is a good </h2>;
+      };
+
+      const App = () => {
+        return (
+          <div>
+            <h1>Welcome to React</h1>
+            <Chai />
+          </div>
+        );
+      };
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
