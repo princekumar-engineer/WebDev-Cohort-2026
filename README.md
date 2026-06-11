@@ -177,10 +177,19 @@ Standard technologies, frameworks, databases, DevOps tools, and AI platforms use
  ┃ ┣ 📂 Kafka Live Location Tracker
  ┃ ┗ 📂 OIDC
  ┃
+ ┣ 📂 Nextjs
+ ┃ ┣ 📂 01 Setup NextJs
+ ┃ ┣ 📂 02 File-Based Routing
+ ┃ ┣ 📂 03 Rendering Strategies
+ ┃ ┣ 📂 04 Client vs Server component
+ ┃ ┗ 📂 05 Server Actions
+ ┃
  ┣ AI Integration
- ┃ ┣ 📂 Day 1 chAI
- ┃ ┣ 📂 Day 2 chAI Inngest 
- ┃ ┗ 📜 README.md 
+ ┃ ┣ 📂 01 State of AI
+ ┃ ┣ 📂 02 Workflows and Agents
+ ┃ ┣ 📂 03 Inngest
+ ┃ ┣ 📂 04 AI Agentic Workflows
+ ┃ ┗ 📂 05 openai-inngest-workflows
  ┃
  ┣ 📜 CONTRIBUTING.md
  ┃
