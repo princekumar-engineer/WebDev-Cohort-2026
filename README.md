@@ -183,6 +183,7 @@ Standard technologies, frameworks, databases, DevOps tools, and AI platforms use
  ┃ ┣ 📂 03 Rendering Strategies
  ┃ ┣ 📂 04 Client vs Server component
  ┃ ┗ 📂 05 Server Actions
+ ┃ ┗ 📂 06 Project/task-flow 
  ┃
  ┣ AI Integration
  ┃ ┣ 📂 01 State of AI
