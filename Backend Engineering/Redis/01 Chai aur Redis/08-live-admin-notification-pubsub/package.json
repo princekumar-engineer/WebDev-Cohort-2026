@@ -1,0 +1,13 @@
+{
+  "name": "08-live-admin-notification-pubsub",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "api": "node src/api.js",
+    "subscriber": "node src/subscriber.js"
+  },
+  "dependencies": {
+    "express": "^4.22.2",
+    "ioredis": "^5.11.1"
+  }
+}
